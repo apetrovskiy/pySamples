@@ -3,8 +3,6 @@ from base import Base
 
 class Child(Base):
     def __init__(self, id, name):
-        # super().id = id
-        # super().name = name
         super().__init__(id, name)
 
     def show(self):
