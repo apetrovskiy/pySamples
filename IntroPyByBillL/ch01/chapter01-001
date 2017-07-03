@@ -1,0 +1,22 @@
+for countdown in 5, 4, 3, 2, 1, "hey!":
+    print(countdown)
+
+cliches = [
+    "a",
+    "bb",
+    "ccc"
+    "dddd",
+    "eeeee",
+    "ffffff"
+]
+print(cliches[3])
+
+quotes = {
+    "M1": "test 001",
+    "L1": "test 002",
+    "C1": "test 003"
+}
+stooge = "C1"
+print(stooge, "says:", quotes[stooge])
+
+
