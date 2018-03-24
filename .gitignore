@@ -243,5 +243,7 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+
+# Python
 venv/
 .idea/
