@@ -247,3 +247,5 @@ ModelManifest.xml
 # Python
 venv/
 .idea/
+
+*.pyc
