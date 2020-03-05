@@ -13,5 +13,13 @@ class StockTest(TestCase):
         We will be using the `datetime` module for the timestamp
         """
         goog = Stock("GOOG")
-        goog.update(datetime(2014, 2, 12), price = 10)
+        goog.update(datetime(2014, 2, 12), price=10)
         self.assertEqual(10, goog.price)
+
+    def test_negative_price_should_throw_ValueError(self):
+        goog = Stock("GOOG")
+        try:
+            goog.update(datetime(2014, 2, 13), -1)
+        except ValueError:
+            return
+        self.fail("ValueError was not raised")
