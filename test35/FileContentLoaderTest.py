@@ -1,6 +1,7 @@
 import unittest
 from filecontentloader import FileContentLoader
 
+
 class MyTestCase(unittest.TestCase):
     def test_file_content(self):
         file_content_loader = FileContentLoader("c:/1/test.txt")

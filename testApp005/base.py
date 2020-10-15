@@ -5,4 +5,3 @@ class Base():
 
     def show(self):
         print("id = %d, name = %s" % (self.id, self.name))
-

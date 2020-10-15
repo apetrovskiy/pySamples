@@ -10,5 +10,6 @@ class MyTestCase(unittest.TestCase):
         import module01
         self.assertEqual("module01", module01.module_name())
 
+
 if __name__ == '__main__':
     unittest.main()
