@@ -11,5 +11,6 @@ class MyTestCase(unittest.TestCase):
         instanceClass002 = cl002()
         print instanceClass002.int_var
 
+
 if __name__ == '__main__':
     unittest.main()

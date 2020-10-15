@@ -1,5 +1,6 @@
 import module01
 
+
 class cl002(module01.cl001):
     self.int_var =
     def __init__(self):
