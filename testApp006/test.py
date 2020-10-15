@@ -4,6 +4,7 @@ class Extender(object):
     def extension(self):
         print("Some work...")
 
+
 class Base(object):
     pass
 

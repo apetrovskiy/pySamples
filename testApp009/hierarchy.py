@@ -4,9 +4,11 @@ class FirstClass:
     def display(self):
         print(self.data)
 
+
 class SecondClass(FirstClass):
     def display(self):
         print('Current value = "%s"' % self.data)
+
 
 class ThirdClass(SecondClass):
     def __init__(self, value):
