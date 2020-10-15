@@ -3,7 +3,8 @@ import unittest
 
 class MyTestCase(unittest.TestCase):
     def test_base_fields(self):
-        id = 3; name = "test"
+        id = 3
+        name = "test"
         from base import Base
         base = Base(id, name)
         base.show()
