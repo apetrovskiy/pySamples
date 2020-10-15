@@ -10,6 +10,7 @@ RSS_FEEDS = {'bbc': 'http://feeds.bbci.co.uk/news/rss.xml',
              'fox': 'http://feeds.foxnews.con/foxnews/latest',
              'iol': 'http://www.iol.co.za/cmlink/1.640'}
 
+
 @app.route("/")
 @app.route("/<publication>")
 def get_news(publication="bbc"):
@@ -25,9 +26,11 @@ def get_news(publication="bbc"):
     #         <i>{1}</i><br/>
     #         <p>{2}</p><br/>
     #     </body>
-    # </html>""".format(first_article.get("title"), first_article.get("published"), first_article.get("summary"))
+    # </html>""".format(first_article.get("title"),
+    # first_article.get("published"),
+    # first_article.get("summary"))
 
-    content = "";
+    content = ""
     for x in range(0, 9):
         content += """
         <b>{0}</b><br/>
