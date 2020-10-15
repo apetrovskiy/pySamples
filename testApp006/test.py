@@ -8,5 +8,6 @@ class Extender(object):
 class Base(object):
     pass
 
+
 Base = type('Base', (Base, Extender, object), {})
 Base().extension()
