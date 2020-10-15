@@ -11,6 +11,10 @@ class TestCalculate(unittest.TestCase):
 
     def test_add_method_raises_typeerror_if_not_ints(self):
         self.assertRaises(TypeError, self.calc.add, "Hello", "World")
+    
+    def test_assert_raises(self):
+        with self.assertRaises(AttributeError):
+            [].get
 
 
 if __name__ == '__main__':
