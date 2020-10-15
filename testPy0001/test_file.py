@@ -8,7 +8,7 @@ class MyTestCase(unittest.TestCase):
 
     def test_child_class(self):
         instanceClass002 = cl002()
-        print( instanceClass002.int_var)
+        print(instanceClass002.int_var)
         self.assertEqual(10, instanceClass002.int_var)
 
 

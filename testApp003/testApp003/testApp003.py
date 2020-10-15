@@ -5,6 +5,7 @@ import sys
 def make_dot_string(x):
     return ' '*int(10*cos(radians(x)+10) + 'o'
 
+
 assert make_dot_string(90) == '          o'
 assert make_dot_string(180) == 'o'
 
