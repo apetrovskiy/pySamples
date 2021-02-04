@@ -1,6 +1,5 @@
 # Input: "aaaabbbcca"
 # Output: [("a", 4), ("b", 3), ("c", 2), ("a", 1)]
-from collections import Counter
 from typing import List, Tuple
 
 
