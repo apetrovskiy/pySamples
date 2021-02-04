@@ -23,3 +23,4 @@ def grouper(input: str) -> List[Tuple[str, int]]:
 
 print(grouper("aaaabbbcca"))
 print(grouper("aaaabbbccca"))
+print(grouper("aaaabbbcccadd"))
