@@ -1,0 +1,1 @@
+[Page](https://realpython.com/pytest-python-testing/#fixtures-managing-state-and-dependencies)
