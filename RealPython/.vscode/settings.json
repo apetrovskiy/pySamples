@@ -1,0 +1,7 @@
+{
+    "python.testing.pytestArgs": [
+        "effective-python-testing-with-pytest"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
+}
