@@ -15,3 +15,7 @@ def test_noop(smtp_connection: SMTP):
     response, msg = smtp_connection.noop()
     assert response == 250
     assert 0  # for demo purposes
+
+
+def test_func1(basemod, optmod):
+    assert round(basemod.func1(), 3) == round(optmod.func1(), 3)

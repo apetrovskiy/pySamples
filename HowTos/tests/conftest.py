@@ -52,8 +52,63 @@ def pytest_addoption(parser):
         default=[],
         help="list of stringinputs to pass to test functions",
     )
+    parser.addoption("--all", action="store_true", help="run all combinations")
 
 
 def pytest_generate_tests(metafunc):
     if "stringinput" in metafunc.fixturenames:
         metafunc.parametrize("stringinput", metafunc.config.getoption("stringinput"))
+    if "param1" in metafunc.fixturenames:
+        if metafunc.config.getoption("all"):
+            end = 5
+        else:
+            end = 2
+        metafunc.parametrize("param1", range(end))
+    if "db" in metafunc.fixturenames:
+        metafunc.parametrize("db", ["d1", "d2"], indirect=True)
+
+
+# def pytest_addoption(parser):
+#     parser.addoption("--all", action="store_true", help="run all combinations")
+
+
+# def pytest_generate_tests(metafunc):
+#     if "param1" in metafunc.fixturenames:
+#         if metafunc.config.getoption("all"):
+#             end = 5
+#         else:
+#             end = 2
+#         metafunc.parametrize("param1", range(end))
+
+
+# def pytest_generate_tests(metafunc):
+#     if "db" in metafunc.fixturenames:
+#         metafunc.parametrize("db", ["d1", "d2"], indirect=True)
+
+
+class DB1:
+    "one database object"
+
+
+class DB2:
+    "alternative database object"
+
+
+@pytest.fixture
+def db(request):
+    if request.param == "d1":
+        return DB1()
+    elif request.param == "d2":
+        return DB2()
+    else:
+        raise ValueError("invalid internal test config")
+
+
+@pytest.fixture(scope="session")
+def basemod(request):
+    return pytest.importorskip("base")
+
+
+@pytest.fixture(scope="session", params=["opt1", "opt2"])
+def optmod(request):
+    return pytest.importorskip(request.param)
