@@ -10,8 +10,8 @@ TEXT2 = "text2.txt"
 def pdf_to_mp3(file_path="test.pdf", language="en"):
     if Path(file_path).is_file() and Path(file_path).suffix == ".pdf":
         # return 'File exists!'
-        print(f'[+] Original file: {Path(file_path).name}')
-        print('[+] Processing...')
+        print(f"[+] Original file: {Path(file_path).name}")
+        print("[+] Processing...")
 
         with pdfplumber.PDF(open(file=file_path, mode="rb")) as pdf:
             pages = [page.extract_text() for page in pdf.pages]
@@ -38,10 +38,15 @@ def pdf_to_mp3(file_path="test.pdf", language="en"):
 
 
 def main():
-    tprint('PDF>>TO>>MP3',font='')
-    file_path=input("\nEnter a file's path: ")
-    language=input("Choose language, for example, 'en' or 'ru'")
-    print(pdf_to_mp3(file_path=("./1.pdf" if file_path == '' else file_path),language="en" if language =='' else language))
+    tprint("PDF>>TO>>MP3", font="")
+    file_path = input("\nEnter a file's path: ")
+    language = input("Choose language, for example, 'en' or 'ru'")
+    print(
+        pdf_to_mp3(
+            file_path=("./1.pdf" if file_path == "" else file_path),
+            language="en" if language == "" else language,
+        )
+    )
 
 
 if __name__ == "__main__":
