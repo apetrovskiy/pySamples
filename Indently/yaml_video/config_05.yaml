@@ -1,0 +1,13 @@
+# Features
+
+person: &person_anchor
+  name: John Doe
+  age: 30
+  occupation: Developer
+
+another_person_01:
+  <<: *person_anchor
+
+another_person_02:
+  <<: *person_anchor
+  name: Apple Bob

@@ -30,3 +30,20 @@ nest_mapping:
   key2:
     subkey1: "subbalue3"
     subkey2: "subbalue4"
+
+nested_list:
+  - list1:
+      - "element1"
+      - "element2"
+  - list2:
+      - "element3"
+      - "element4"
+
+nested_list_2:
+  - list1:
+      - "element1"
+      - "element2"
+  - list2:
+      subkey:
+        - "element3"
+        - "element4"
