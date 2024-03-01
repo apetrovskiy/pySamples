@@ -1,0 +1,25 @@
+# companies.yaml
+- !Company
+  company_name: PoundCompany
+  active: True 
+  has_dimensions: True
+  dimensions:
+    - sillyname1
+    - sillyname2
+  file_mapping:
+    account_number_map: accounts.csv
+    account_type_map: accounts.csv
+    tax_code_map: taxcodes.csv
+  bi_central_uuid: 00000000-0000-0000-0000-000000000001
+- !Company
+  company_name: EuroCompany
+  active: True 
+  has_dimensions: True
+  dimensions:
+    - sillyname1
+    - sillyname2
+  file_mapping:
+    account_number_map: accounts.csv
+    account_type_map: accounts.csv
+    tax_code_map: taxcodes.csv
+  bi_central_uuid: 00000000-0000-0000-0000-000000000002
