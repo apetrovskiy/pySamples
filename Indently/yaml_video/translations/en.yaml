@@ -1,0 +1,15 @@
+info:
+  language: "en"
+  version: "1.0.0"
+  website: "https://www.example.com"
+  edited_by: "John Doe"
+
+greetings:
+  hello: "Hello"
+  goodbye: "Goodbye"
+  good_morning: "Good morning"
+  good_night: "Good night"
+
+messages:
+  welcome: "Welcome to our application!"
+  error: "An error has occured. Please try again."
