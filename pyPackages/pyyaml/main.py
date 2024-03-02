@@ -4,7 +4,8 @@ from configuration import Configuration
 from src.core.config.config_loader import load_config
 from src.model.config.config import Config
 
-CONFIG_FILE_NAME = "./config.yml"  # "test.yml"
+CONFIG_FILE_NAME = "./config.yml"
+CONFIG_FILE_NAME_2 = "test.yml"
 
 
 def load_config_2(path: str) -> Config:
@@ -29,9 +30,11 @@ print(config02.timebase_config.server)
 print(
     "===================================================================================================="
 )
-config03 = load_config_3("test.yml")
+config03 = load_config_3(CONFIG_FILE_NAME_2)
 pprint(config03)
 print(config03.test1.test11.aaa)
+print(config03.test1)
+print(config03.test2.test21.eeee)
 print(
     "===================================================================================================="
 )
