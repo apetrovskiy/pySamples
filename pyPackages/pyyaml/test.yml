@@ -9,3 +9,4 @@ test1: !!configuration.Test1
 test2: !!configuration.Test2
   test21: !!configuration.Test21
     eeee: eeee
+data: TWO !!configuration.Data

@@ -35,6 +35,9 @@ pprint(config03)
 print(config03.test1.test11.aaa)
 print(config03.test1)
 print(config03.test2.test21.eeee)
+print(config03.data)
+print(type(config03.data))
+# print(type(config03.data.get_value()))
 print(
     "===================================================================================================="
 )
