@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+from enum import Enum
 import yaml
 
 
@@ -53,12 +54,19 @@ class Test2(yaml.YAMLObject):
     #     self.test21 = test21
 
 
+class Enum01(Enum):
+    yaml_tag = "tag:yaml.org,2002:configuration.Enum01"
+    AAA = "aaaa"
+    BBB = "bbbb"
+
+
 # @dataclass
 class Configuration(yaml.YAMLObject):
     yaml_tag = "tag:yaml.org,2002:configuration.Configuration"
 
     test1: Test1
     test2: Test2
+    enum01: Enum01
 
     # def __init__(self, test1: Test1, test2: Test2):
     #     self.test1 = test1
