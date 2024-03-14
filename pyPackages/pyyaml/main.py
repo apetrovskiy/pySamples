@@ -20,6 +20,7 @@ def load_config_3(path: str) -> Configuration:
 
 config01 = load_config()
 pprint(config01)
+pprint(config01.postgres_config)
 print(config01.postgres_config.database)
 print(
     "===================================================================================================="
