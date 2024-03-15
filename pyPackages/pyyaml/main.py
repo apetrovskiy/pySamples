@@ -20,6 +20,7 @@ def load_config_3(path: str) -> Configuration:
 
 config01 = load_config()
 pprint(config01)
+pprint(config01.postgres_config)
 print(config01.postgres_config.database)
 print(
     "===================================================================================================="
@@ -35,6 +36,11 @@ pprint(config03)
 print(config03.test1.test11.aaa)
 print(config03.test1)
 print(config03.test2.test21.eeee)
+pprint(config03.tests)
+pprint(config03.tests2)
+# print(config03.enum01)
+# print(config03.enum01.name)
+# print(config03.enum01.value)
 print(
     "===================================================================================================="
 )
