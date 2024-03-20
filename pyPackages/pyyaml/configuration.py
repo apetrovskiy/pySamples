@@ -1,15 +1,10 @@
-# <<<<<<< HEAD
-# from dataclasses import dataclass
-# from enum import Enum
 import yaml
 
-# =======
+
 from dataclasses import dataclass, field
 from enum import Enum
 from typing import List, Optional
 from yaml import YAMLObject
-
-# >>>>>>> develop
 
 
 @dataclass
@@ -100,7 +95,6 @@ class Enum01(Enum):
 
 @dataclass
 class Configuration(YAMLObject):
-    # >>>>>>> develop
     yaml_tag = "tag:yaml.org,2002:configuration.Configuration"
 
     test1: Test1

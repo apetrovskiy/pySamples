@@ -54,8 +54,7 @@ def display_configuration(config: Configuration):
     )
 
 
-config01 = load_config()
-# <<<<<<< HEAD
+config01 = load_config(CONFIG_FILE_NAME)
 display_config(config=config01)
 
 
@@ -72,10 +71,6 @@ display_configuration(config=config04)
 
 #######################
 
-
-# test_data = Configuration()
-
-# pprint(test_data)
 
 with open(CONFIG_FILE_NAME, "r") as file:
     # config = yaml.safe_load(file)
