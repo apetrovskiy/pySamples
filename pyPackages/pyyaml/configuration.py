@@ -1,10 +1,17 @@
-from dataclasses import dataclass
-from enum import Enum
+# <<<<<<< HEAD
+# from dataclasses import dataclass
+# from enum import Enum
 import yaml
+# =======
+from dataclasses import dataclass, field
+from enum import Enum
+from typing import List, Optional
+from yaml import YAMLObject
+# >>>>>>> develop
 
 
-# @dataclass
-class Test11(yaml.YAMLObject):
+@dataclass
+class Test11(YAMLObject):
     aaa: str
     bbb: str
     yaml_tag = "tag:yaml.org,2002:configuration.Test11"
@@ -14,8 +21,8 @@ class Test11(yaml.YAMLObject):
     #     self.bbb = bbb
 
 
-# @dataclass
-class Test12(yaml.YAMLObject):
+@dataclass
+class Test12(YAMLObject):
     ccc: str
     ddd: str
     yaml_tag = "tag:yaml.org,2002:configuration.Test12"
@@ -25,8 +32,8 @@ class Test12(yaml.YAMLObject):
     #     self.ddd = ddd
 
 
-# @dataclass
-class Test21(yaml.YAMLObject):
+@dataclass
+class Test21(YAMLObject):
     # eeee: str
     yaml_tag = "tag:yaml.org,2002:configuration.Test21"
 
@@ -34,26 +41,26 @@ class Test21(yaml.YAMLObject):
         self.eeee = eeee
 
 
-# @dataclass
-class Test1(yaml.YAMLObject):
+@dataclass
+class Test1(YAMLObject):
+    yaml_tag = "tag:yaml.org,2002:configuration.Test1"
     test11: Test11
     test12: Test12
-    yaml_tag = "tag:yaml.org,2002:configuration.Test1"
 
     # def __init__(self, test11: Test11, test12: Test12):
     #     self.test11 = test11
     #     self.test12 = test12
 
 
-# @dataclass
-class Test2(yaml.YAMLObject):
+@dataclass
+class Test2(YAMLObject):
     test21: Test21
     yaml_tag = "tag:yaml.org,2002:configuration.Test2"
 
     # def __init__(self, test21: Test21):
     #     self.test21 = test21
 
-
+"""
 class Enum01(Enum):
     AAA = "aaaa"
     BBB = "bbbb"
@@ -65,11 +72,43 @@ class Enum01(Enum):
 
 # @dataclass
 class Configuration(yaml.YAMLObject):
+"""
+
+
+@dataclass
+class Enum01(Enum):
+    # yaml_tag = "tag:yaml.org,2002:configuration.Enum01"
+    AAA = "aaaa"
+    BBB = "bbbb"
+
+    # @classmethod
+    # def __init__(cls, constructor, node):
+    #     return cls[node.value]
+
+    @classmethod
+    def to_yaml(cls, representer, node):
+        return representer.represent_sclar(f"!{cls.__name__}", "{.name}".format(node))
+
+    @classmethod
+    def from_yaml(cls, constructor, node):
+        print("breakpoint hit")
+        return cls[node.value]
+
+
+@dataclass
+class Configuration(YAMLObject):
+# >>>>>>> develop
     yaml_tag = "tag:yaml.org,2002:configuration.Configuration"
 
     test1: Test1
     test2: Test2
-    enum01: str  # Enum01
+# <<<<<<< HEAD
+#     enum01: str  # Enum01
+# =======
+    tests: List[Test1]
+    tests2: Optional[List[Test2]]
+    enum01: Enum01 = field(default=None, metadata={"by_value": True})
+# >>>>>>> develop
 
     # def __init__(self, test1: Test1, test2: Test2):
     #     self.test1 = test1

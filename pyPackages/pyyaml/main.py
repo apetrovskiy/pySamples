@@ -6,6 +6,7 @@ from src.model.config.config import Config
 
 CONFIG_FILE_NAME = "./config.yml"
 CONFIG_FILE_NAME_2 = "test.yml"
+CONFIG_FILE_NAME_3 = "test2.yml"
 
 
 def load_config_2(path: str) -> Config:
@@ -50,16 +51,43 @@ def display_configuration(config: Configuration):
 
 
 config01 = load_config()
+# <<<<<<< HEAD
 display_config(config=config01)
 
 
+# =======
+# pprint(config01)
+# pprint(config01.postgres_config)
+# print(config01.postgres_config.database)
+# print(
+#     "===================================================================================================="
+# )
+# >>>>>>> develop
 config02 = load_config_2(CONFIG_FILE_NAME)
 display_config(config=config02)
 
 
 config03 = load_config_3(CONFIG_FILE_NAME_2)
+# <<<<<<< HEAD
 display_configuration(config=config03)
 
+# =======
+# pprint(config03)
+# print(config03.test1.test11.aaa)
+# print(config03.test1)
+# print(config03.test2.test21.eeee)
+# pprint(config03.tests)
+# pprint(config03.tests2)
+# # print(config03.enum01)
+# # print(config03.enum01.name)
+# # print(config03.enum01.value)
+# print(
+#     "===================================================================================================="
+# )
+# >>>>>>> develop
+
+config04=load_config_3(CONFIG_FILE_NAME_3)
+display_configuration(config=config04)
 
 #######################
 
