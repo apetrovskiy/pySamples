@@ -1,14 +1,3 @@
-!!configuration.Configuration
-test1: !!configuration.Test1
-  test11: !!configuration.Test11
-    aaa: aaa1
-    bbb: bbbb
-  test12: !!configuration.Test12
-    ccc: cccc
-    ddd: dddd
-test2: !!configuration.Test2
-  test21: !!configuration.Test21
-    eeee: eeee
 tests:  !!python/list 
   - aa: !!configuration.Test1
       test11: !!configuration.Test11

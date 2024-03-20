@@ -1,3 +1,6 @@
+import yaml
+
+
 from dataclasses import dataclass, field
 from enum import Enum
 from typing import List, Optional
@@ -55,6 +58,21 @@ class Test2(YAMLObject):
     #     self.test21 = test21
 
 
+"""
+class Enum01(Enum):
+    AAA = "aaaa"
+    BBB = "bbbb"
+    yaml_ta = "tag:yaml.org,2002:configuration.Enum01"
+
+    def __init__(self, value) -> None:
+        super().__init__()
+
+
+# @dataclass
+class Configuration(yaml.YAMLObject):
+"""
+
+
 @dataclass
 class Enum01(Enum):
     # yaml_tag = "tag:yaml.org,2002:configuration.Enum01"
@@ -81,10 +99,11 @@ class Configuration(YAMLObject):
 
     test1: Test1
     test2: Test2
-    tests: List[Test1]
-    tests2: Optional[List[Test2]]
+    tests: List[Test1] = field(default=None)
+    tests2: Optional[List[Test2]] = field(default=None)
     enum01: Enum01 = field(default=None, metadata={"by_value": True})
 
-    # def __init__(self, test1: Test1, test2: Test2):
-    #     self.test1 = test1
-    #     self.test2 = test2
+
+# def __init__(self, test1: Test1, test2: Test2):
+#     self.test1 = test1
+#     self.test2 = test2
