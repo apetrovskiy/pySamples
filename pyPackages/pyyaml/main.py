@@ -18,29 +18,45 @@ def load_config_3(path: str) -> Configuration:
         return yaml.load(file, Loader=yaml.Loader)
 
 
+def display_config(config: Config):
+    print(
+        "======================================== Config: ========================================"
+    )
+    pprint(config)
+    print(config.postgres_config.database)
+    print(config.timebase_config.server)
+    print(
+        "======================================== the end ========================================"
+    )
+
+
+def display_configuration(config: Configuration):
+    print(
+        "======================================== Configuaration: ========================================"
+    )
+    pprint(config)
+    print(config.test1.test11.aaa)
+    print(config.test1)
+    print(config.test2.test21.eeee)
+    # print(config.enum01)
+    # print(config.enum01.name)
+    # print(config.enum01.value)
+    print(
+        "======================================== the end! ========================================"
+    )
+
+
 config01 = load_config()
-pprint(config01)
-print(config01.postgres_config.database)
-print(
-    "===================================================================================================="
-)
+display_config(config=config01)
+
+
 config02 = load_config_2(CONFIG_FILE_NAME)
-pprint(config02)
-print(config02.timebase_config.server)
-print(
-    "===================================================================================================="
-)
+display_config(config=config02)
+
+
 config03 = load_config_3(CONFIG_FILE_NAME_2)
-pprint(config03)
-print(config03.test1.test11.aaa)
-print(config03.test1)
-print(config03.test2.test21.eeee)
-# print(config03.enum01)
-# print(config03.enum01.name)
-# print(config03.enum01.value)
-print(
-    "===================================================================================================="
-)
+display_configuration(config=config03)
+
 
 #######################
 
