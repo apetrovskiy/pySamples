@@ -55,9 +55,12 @@ class Test2(yaml.YAMLObject):
 
 
 class Enum01(Enum):
-    yaml_tag = "tag:yaml.org,2002:configuration.Enum01"
     AAA = "aaaa"
     BBB = "bbbb"
+    yaml_ta = "tag:yaml.org,2002:configuration.Enum01"
+
+    def __init__(self, value) -> None:
+        super().__init__()
 
 
 # @dataclass
@@ -66,7 +69,7 @@ class Configuration(yaml.YAMLObject):
 
     test1: Test1
     test2: Test2
-    enum01: Enum01
+    enum01: str  # Enum01
 
     # def __init__(self, test1: Test1, test2: Test2):
     #     self.test1 = test1

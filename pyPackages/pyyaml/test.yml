@@ -10,3 +10,4 @@ test2: !!configuration.Test2
   test21: !!configuration.Test21
     eeee: eeee
 # enum01: !!configuration.Enum01: bbbb
+enum01: bbbbb

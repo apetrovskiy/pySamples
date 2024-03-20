@@ -35,10 +35,13 @@ def display_configuration(config: Configuration):
         "======================================== Configuaration: ========================================"
     )
     pprint(config)
-    print(config.test1.test11.aaa)
     print(config.test1)
+    print(config.test1.test11.aaa)
+    print(config.test1.test11.bbb)
+    print(config.test1.test12.ccc)
+    print(config.test1.test12.ddd)
     print(config.test2.test21.eeee)
-    # print(config.enum01)
+    print(config.enum01)
     # print(config.enum01.name)
     # print(config.enum01.value)
     print(
