@@ -2,11 +2,13 @@
 # from dataclasses import dataclass
 # from enum import Enum
 import yaml
+
 # =======
 from dataclasses import dataclass, field
 from enum import Enum
 from typing import List, Optional
 from yaml import YAMLObject
+
 # >>>>>>> develop
 
 
@@ -60,6 +62,7 @@ class Test2(YAMLObject):
     # def __init__(self, test21: Test21):
     #     self.test21 = test21
 
+
 """
 class Enum01(Enum):
     AAA = "aaaa"
@@ -97,19 +100,16 @@ class Enum01(Enum):
 
 @dataclass
 class Configuration(YAMLObject):
-# >>>>>>> develop
+    # >>>>>>> develop
     yaml_tag = "tag:yaml.org,2002:configuration.Configuration"
 
     test1: Test1
     test2: Test2
-# <<<<<<< HEAD
-#     enum01: str  # Enum01
-# =======
-    tests: List[Test1]
-    tests2: Optional[List[Test2]]
+    tests: List[Test1] = field(default=None)
+    tests2: Optional[List[Test2]] = field(default=None)
     enum01: Enum01 = field(default=None, metadata={"by_value": True})
-# >>>>>>> develop
 
-    # def __init__(self, test1: Test1, test2: Test2):
-    #     self.test1 = test1
-    #     self.test2 = test2
+
+# def __init__(self, test1: Test1, test2: Test2):
+#     self.test1 = test1
+#     self.test2 = test2
