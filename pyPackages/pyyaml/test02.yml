@@ -1,0 +1,14 @@
+tests:  !!python/list 
+  - aa: !!configuration.Test1
+      test11: !!configuration.Test11
+        aaa: aaa_coll
+        bbb: bbb_coll
+      test12: !!configuration.Test12
+        ccc: ccc_coll
+        ddd: ddd_coll
+tests2: !!python/list
+  - a1: !!configuration.Test2
+      test21: !!configuration.Test21
+        eeee: eeee_coll
+# enum01: !!configuration.Enum01: bbbb
+enum01:  bbbb
