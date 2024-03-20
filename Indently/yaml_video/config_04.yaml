@@ -1,0 +1,7 @@
+# Features
+
+item: &item_anchor [1, 2, 3, 10] # anchor
+
+tool:
+  name: "hammer"
+  item: *item_anchor # alias or variable

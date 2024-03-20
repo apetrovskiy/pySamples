@@ -1,0 +1,49 @@
+# Data types
+
+string_value: "Hello, World!"
+int: 42
+float: 3.14
+bool1: true
+bool2: false
+bool3: on
+bool4: off
+bool5: yes
+bool6: no
+null: null
+null_val: null
+null_val2: ~
+
+mapping:
+  key1: "value1"
+  key2: "value2"
+
+list1: [item1, item2, item3]
+list2:
+  - item1
+  - item2
+  - item3
+
+nest_mapping:
+  key1:
+    subkey1: "subbalue1"
+    subkey2: "subbalue2"
+  key2:
+    subkey1: "subbalue3"
+    subkey2: "subbalue4"
+
+nested_list:
+  - list1:
+      - "element1"
+      - "element2"
+  - list2:
+      - "element3"
+      - "element4"
+
+nested_list_2:
+  - list1:
+      - "element1"
+      - "element2"
+  - list2:
+      subkey:
+        - "element3"
+        - "element4"

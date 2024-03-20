@@ -1,0 +1,15 @@
+info:
+  language: "es"
+  version: "1.0.0"
+  website: "https://www.example.com"
+  edited_by: "Johnes Doez"
+
+greetings:
+  hello: "Hola"
+  goodbye: "Asiós"
+  good_morning: "Buenos dias"
+  good_night: "Buenas noches"
+
+messages:
+  welcome: "!Bienvenido a nuestra aplicación!"
+  error: "Ha ocurrido un error. Por favor, inténtelo de nuevo."

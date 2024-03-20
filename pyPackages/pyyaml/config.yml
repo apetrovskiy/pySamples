@@ -1,0 +1,18 @@
+!!src.model.config.config.Config
+sqlite_config:
+  !!src.model.config.sqlite_config.SqliteConfig
+  buffer_db_path: C:\Users\aleksandr_petrovskii\buffer.db
+  time_tracking_db_path: C:\Users\aleksandr_petrovskii\time_tracking.db
+postgres_config:
+  !!src.model.config.postgres_config.PostgresConfig
+  server: stage-postgres-01.postgres.database.azure.com
+  port: 5432
+  database: cachedb_new
+  username: readaccess@stage-postgres-01
+  password: XXXXXXXXXXXXXX
+timebase_config:
+  !!src.model.config.timebase_config.TimebaseConfig
+  server: timebase.stage.connect.epm-plx.projects.xxx.com
+  port: 8011
+  username: admin
+  password: YYYYYYYYYYY
